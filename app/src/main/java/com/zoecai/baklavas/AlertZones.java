@@ -1,5 +1,7 @@
 package com.zoecai.baklavas;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -25,6 +27,7 @@ public class AlertZones extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                getFragmentManager().beginTransaction().replace(R.id.mainArea, new AddZoneMap()).commit();
             }
         });
     }
